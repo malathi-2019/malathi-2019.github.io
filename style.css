@@ -877,7 +877,7 @@ footer {
 }
 
 .stat-circle:nth-child(2) {
-    transform: translateX(140px);
+    transform: translateX(120px);
 }
 
 .stat-circle:nth-child(3) {
