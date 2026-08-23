@@ -790,6 +790,128 @@ footer {
         height: auto;
     }
 }
+/* ============================= */
+/* ADVOCATE PROFILE SECTION */
+/* ============================= */
+
+.advocate-profile {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    padding: 100px 10%;
+}
+
+.advocate-info {
+    width: 50%;
+}
+
+.advocate-info h2 {
+    font-size: 50px;
+    margin-bottom: 25px;
+}
+
+.advocate-info h2 span {
+    display: block;
+}
+
+.advocate-description {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+
+/* RIGHT SIDE CIRCLES */
+
+.advocate-stats {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.stat-circle {
+    width: 190px;
+    height: 190px;
+    border: 2px solid #c9a24d;
+    border-radius: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    opacity: 0;
+    transform: translateX(150px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.stat-circle strong {
+    font-size: 42px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.stat-circle span {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+/* WHEN USER SCROLLS TO THE SECTION */
+
+.stat-circle.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* MAKE EACH CIRCLE SLIGHTLY DELAYED */
+
+.stat-circle:nth-child(2) {
+    transition-delay: 0.25s;
+}
+
+.stat-circle:nth-child(3) {
+    transition-delay: 0.5s;
+}
+
+
+/* MOBILE VIEW */
+
+@media (max-width: 768px) {
+
+    .advocate-profile {
+        flex-direction: column;
+        padding: 70px 8%;
+        gap: 50px;
+    }
+
+    .advocate-info,
+    .advocate-stats {
+        width: 100%;
+    }
+
+    .advocate-info h2 {
+        font-size: 38px;
+    }
+
+    .stat-circle {
+        width: 160px;
+        height: 160px;
+    }
+
+}
+
+
 }
 
 
